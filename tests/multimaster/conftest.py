@@ -5,6 +5,8 @@
 
     Multimaster PyTest prep routines
 '''
+# pylint: skip-file
+
 from __future__ import absolute_import, print_function, unicode_literals
 import os
 import shutil
@@ -18,9 +20,9 @@ import salt.utils.files
 from salt.serializers import yaml
 from salt.utils.immutabletypes import freeze
 from tests.support.runtests import RUNTIME_VARS
-from pytestsalt.fixtures.ports import get_unused_localhost_port
-from pytestsalt.fixtures.config import apply_master_config, apply_minion_config
-from pytestsalt.fixtures.daemons import SaltMaster, SaltMinion, start_daemon
+from saltfactories.utils.ports import get_unused_localhost_port
+#from saltfactories.fixtures.config import apply_master_config, apply_minion_config
+from saltfactories.utils.processes import SaltMaster, SaltMinion, start_daemon
 
 log = logging.getLogger(__name__)
 
